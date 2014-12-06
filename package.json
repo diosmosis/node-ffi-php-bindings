@@ -1,6 +1,6 @@
 {
   "name": "node-ffi-php-bindings",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Generated node-ffi bindings for PHP source code. Embed PHP from node.js w/o creating your own node extension.",
   "main": "lib/index.js",
   "scripts": {
