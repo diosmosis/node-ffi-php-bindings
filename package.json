@@ -16,5 +16,9 @@
   "license": "ISC",
   "dependencies": {
       "glob": "latest"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "http://github.com/diosmosis/node-ffi-php-bindings.git"
   }
 }
