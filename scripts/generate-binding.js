@@ -178,6 +178,7 @@ proc.on('close', function (code) {
         "-D__need_wchar_t",
         "-D__need_timeval",
         "--assume-pragma-once"
+        //, "--log-level=DEBUG"
     ].concat(include_directories.map(function (p) {
         return "--include=" + p;
     }));
