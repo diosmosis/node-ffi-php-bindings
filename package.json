@@ -14,11 +14,16 @@
   ],
   "author": "diosmosis",
   "license": "ISC",
-  "dependencies": {
-      "glob": "latest"
-  },
   "repository": {
     "type" : "git",
     "url" : "http://github.com/diosmosis/node-ffi-php-bindings.git"
+  },
+  "devDependencies": {
+    "glob": "latest",
+    "ffi": "latest",
+    "ref": "latest",
+    "ref-struct": "latest",
+    "ref-union": "latest",
+    "ref-array": "latest"
   }
 }

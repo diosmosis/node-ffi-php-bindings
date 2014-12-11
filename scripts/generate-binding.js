@@ -42,7 +42,8 @@ function makedirs(dirs) {
 var script_dir = __dirname,
     node_ffi_generator_path = process.argv[2],
     php_source_root = process.argv[3],
-    llvm_dir = process.argv[4];
+    llvm_dir = process.argv[4],
+    path_to_php_embed = process.argv[5]; // TODO: use a config file of some kind
 
 var repo_root_dir = path.join(script_dir, '..'),
     php_version_slug = path.basename(php_source_root).match(/php-(\d+.\d+).*/)[1],
@@ -177,7 +178,8 @@ proc.on('close', function (code) {
         "-D_VA_LIST_DEFINED",
         "-D__need_wchar_t",
         "-D__need_timeval",
-        "--assume-pragma-once"
+        "--assume-pragma-once",
+        "--bind-lib=" + path_to_php_embed,
         //, "--log-level=DEBUG"
     ].concat(include_directories.map(function (p) {
         return "--include=" + p;
